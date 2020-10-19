@@ -1,8 +1,15 @@
 development:
-  adapter: async
+  adapter: redis
+  url: redis://localhost:6379/10
+  channel_prefix: secret_template_dev
 
 test:
   adapter: test
+
+staging:
+  adapter: redis
+  url: redis://localhost:6379/20
+  channel_prefix: secret_template_staging
 
 production:
   adapter: redis
